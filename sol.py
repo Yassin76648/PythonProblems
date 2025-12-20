@@ -120,8 +120,8 @@ for i in range(0, 6):
     print()
 
 
-# Exercise 15: Get an int value of base raises to the power of exponent
-# Write a function called exponent(base, exp) that returns an int value of base raises to the power of exp.
+# Exercise 15: Get an int value of base raised to the power of exponent
+# Write a function called exponent(base, exp) that returns an int value of base raised to the power of exp.
 # Note here exp is a non-negative integer, and the base is an integer.
     
 def exp(base, exponent):
@@ -132,3 +132,23 @@ def exp(base, exponent):
         result *= base
     return result
 print(exp(2, 5))
+
+
+# Exercise 17: Generate Fibonacci series up to 15 terms
+# Have you ever wondered about the Fibonacci Sequence? It’s a series of numbers in which the next number is found by adding up the two numbers before it. The first two numbers are 0 and 1.
+# For example, 0, 1, 1, 2, 3, 5, 8, 13, 21. The next number in this series is 13 + 21 = 34.
+# Expected output:
+# Fibonacci sequence:
+# 0  1  1  2  3  5  8  13  21  34  55  89  144  233  377
+
+def fib(num):
+    prev = 0
+    current = 1
+
+    for i in range(num):
+        print(prev, " ") # 0 1
+        next_fib = prev + current
+        prev = current      # 1
+        current =  next_fib  # 1 
+fib(15)
+
