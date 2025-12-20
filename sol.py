@@ -120,3 +120,15 @@ for i in range(0, 6):
     print()
 
 
+# Exercise 15: Get an int value of base raises to the power of exponent
+# Write a function called exponent(base, exp) that returns an int value of base raises to the power of exp.
+# Note here exp is a non-negative integer, and the base is an integer.
+    
+def exp(base, exponent):
+    if exponent < 0 :
+        print("Sorry , exponent is negative")
+    result = 1
+    for i in range(1, exponent+1) :
+        result *= base
+    return result
+print(exp(2, 5))
