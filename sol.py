@@ -67,7 +67,6 @@ for i in str(number)[::-1]:
 # Expected Output:
 # For example, suppose the income is 45000, and the income tax payable is
 # 10000*0% + 10000*10%  + 25000*20% = $6000
-
 def income_tax(income):
     remaining_income = 0
     tax = 0
@@ -98,7 +97,6 @@ print(income_tax(income))
 # 8  16 24 32 40 48 56 64 72 80 
 # 9  18 27 36 45 54 63 72 81 90 
 # 10 20 30 40 50 60 70 80 90 100 
-
 for i in range(1, 11):                        
     for j in range(1, 11):
         if i*j > 9 :
@@ -107,13 +105,13 @@ for i in range(1, 11):
             print(j*i, end="  ")
     print()
 
+
 # Exercise 14: Print a downward half-pyramid pattern of stars
 # * * * * *  
 # * * * *  
 # * * *  
 # * *  
 # *
-
 for i in range(0, 6):                        
     for j in range(i, 6):
             print("*", end=" ")
@@ -123,7 +121,6 @@ for i in range(0, 6):
 # Exercise 15: Get an int value of base raised to the power of exponent
 # Write a function called exponent(base, exp) that returns an int value of base raised to the power of exp.
 # Note here exp is a non-negative integer, and the base is an integer.
-    
 def exp(base, exponent):
     if exponent < 0 :
         print("Sorry , exponent is negative")
@@ -140,7 +137,6 @@ print(exp(2, 5))
 # Expected output:
 # Fibonacci sequence:
 # 0  1  1  2  3  5  8  13  21  34  55  89  144  233  377
-
 def fib(num):
     prev = 0
     current = 1
@@ -151,4 +147,69 @@ def fib(num):
         prev = current      # 1
         current =  next_fib  # 1 
 fib(15)
+
+
+# Exercise 18: Check if a given year is a leap year
+# Rules for leap years: a year is a leap year if it’s divisible by 4, unless it’s also divisible by 100 but not by 400.
+def leap_year(year):
+    if year%4 == 0:
+        if year%100 == 0 and year%400 != 0:
+            return False
+    else :
+        return False
+    return True
+print(leap_year(2025))
+
+# Exercise: 19: Print Alternate Prime Numbers till 20
+# A Prime Number is a number that can only be divided by itself and 1 without remainders (e.g., 2, 3, 5, 7, 11).
+def prime_number(num):
+    for i in range(2, num):
+        is_prime = True
+        for j in range(2, i):
+            if i%j == 0:
+                is_prime = False
+                break
+        if is_prime == True :
+            print(i, end = " ")
+prime_number(20)
+
+
+# Exercise 20: Print Reverse Number Pattern
+# Expected Output:
+# 1 1 1 1 1 
+# 2 2 2 2 
+# 3 3 3 
+# 4 4 
+# 5 
+
+for i in range(1, 6):
+    for j in range(i, 6):
+        print(i, end =" ")
+    print()
+
+
+# Exercise 21: Check if a user-entered string contains any digits using a for loop
+def check_digits(string):
+    for i in string:
+        if i.isalpha():
+            continue
+        else:
+            print("The string contains at least one digit.")
+            break
+        print("The string does not contain any digits.")
+
+check_digits("Pynative123Python")
+
+# Exercise 22: Capitalize the first letter of each word in a string
+def capitalize(sentence):
+    words = sentence.split()
+    capitalized_words = []
+    for word in words:
+        capitalized_words.append(word.capitalize())
+    new_sentence = " ".join(capitalized_words)
+    return new_sentence
+
+print(capitalize("The string does not contain any digits"))
+
+
 
