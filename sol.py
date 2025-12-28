@@ -211,5 +211,3 @@ def capitalize(sentence):
 
 print(capitalize("The string does not contain any digits"))
 
-
-
